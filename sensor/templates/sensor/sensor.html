@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Dinh Duy Nam">
+  <meta name="description" content="Website's design by Duy Nam">
+  <meta name="author" content="Duy Nam">
+  <meta http-equiv="refresh" content="5">
+  <link rel="stylesheet" href="{% static 'css/sensor.css' %}">
+</head>
+
+<body>
+    <div class='container'>
+        <div class='card temp'>
+            <div class='inner'>
+                <div class='icon'>
+                    <img src="{% static 'images/icons/temperature.png' %}" width="60 " height="70 "></div>
+      <div class='title'>
+        <div class='text'>TEMPERATURE</div>
+      </div>
+      <div class='number'>{{ temperature.Value }}°C</div>
+    </div>
+  </div>
+  <div class='card energy'>
+    <div class='inner'>
+      <div class='icon'><img src="{% static 'images/icons/humidity.png' %}" width="60 " height="70 "></div>
+      <div class='title'>
+        <div class='text'>HUMIDITY</div>
+      </div>
+      <div class='number'>{{ humidity.Value }}  %</div>
+    </div>
+  </div>
+</div>
+
+<div class="column ">
+  <h2>Temperature</h2>
+<table >
+  <tr>
+    <th>Date_and_Time</th>
+    <th>Sensor_ID</th>
+    <th>Temperature °C</th>
+  </tr>
+  {% for sensor1 in sensor1 %}
+  <tr>
+    <td>{{ sensor1.Date_and_Time }}</td>
+    <td>{{ sensor1.SensorID }}</td>
+    <td>{{ sensor1.Value }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+</div>
+
+<div class="column ">
+  <h2>Humidity</h2>
+
+<table>
+  <tr>
+    <th>Date_and_Time</th>
+    <th>Sensor_ID</th>
+    <th>Humidity %</th>
+  </tr>
+    {% for sensor2 in sensor2 %}
+  <tr>
+    <td>{{ sensor2.Date_and_Time }}</td>
+    <td>{{ sensor2.SensorID }}</td>
+    <td>{{ sensor2.Value }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+</body>
+</html>

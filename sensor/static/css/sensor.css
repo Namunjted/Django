@@ -1,0 +1,119 @@
+table {
+  border-collapse: collapse;
+  width: 90%;
+  background-color: #d7fddb;
+  /*table-layout:initial;*/
+}
+
+th, td {
+  text-align: center;
+  padding: 4px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2
+  border: 4px dotted blue;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+.column {
+    float: left;
+    width: 50%;
+    text-align: center;
+  margin-top: 60 
+}
+.container {
+  width: 385px;
+  height: 226px;
+  margin: 50px auto;
+}
+.card {
+  float: left;
+  width: 180px;
+  height: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-right: 10px;
+  background: #F9F9F9;
+  position: relative;
+  box-shadow: 0px 0px 3px #ddd;
+}
+.card .inner {
+  background: #F9F9F9;
+  border: 1px solid #E3E3E3;
+  border-radius: 0px 0px 5px 5px;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  font-family: arial;
+  text-align: center;
+  box-shadow: inset 0px 0px 1px #FFF;
+}
+.card .inner .title {
+  display: block;
+  font-size: 9px;
+  color: #fff;
+  margin-top: -10px;
+}
+.card .inner .title .text {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.card .inner .number {
+  color: #313A3E;
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+.card .inner {
+  color: #676767;
+  font-size: 20px;
+  display: block;
+  /*margin-top: -10px;*/
+}
+.temp {
+  background: #EC6F69;
+  border: 1px solid #DE3932;
+}
+.temp .inner {
+  border-top: 1px solid #DE3932;
+}
+.temp .inner .text {
+  border: 1px solid #DE3932;
+  background: #EC6F69;
+  text-shadow: 1px 1px 0px #DE3932;
+}
+.temp .inner .icon {
+  display: block;
+  position: absolute;
+  top: -80px;
+  left: 65px;
+}
+
+.energy {
+  background: #A6C659;
+  border: 1px solid #7DAD0A;
+}
+.energy .inner {
+  border-top: 1px solid #7DAD0A;
+}
+.energy .inner .icon {
+  position: absolute;
+  top: -100px;
+  left: 60px;
+}
+
+
+.energy .inner .text {
+  border: 1px solid #7DAD0A;
+  background: #A6C659;
+  text-shadow: 1px 1px 0px #7DAD0A;
+}
